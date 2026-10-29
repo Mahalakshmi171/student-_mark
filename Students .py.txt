@@ -1,0 +1,26 @@
+
+students = {
+    "Arun": 80,
+    "Priya": 95,
+    "Kumar": 65,
+    "Divya": 90
+}
+
+print("STUDENT MARKS ANALYSIS")
+print("----------------------")
+
+for name, marks in students.items():
+    print(name, ":", marks)
+
+average = sum(students.values()) / len(students)
+highest = max(students.values())
+topper = max(students, key=students.get)
+
+print("\nAverage Marks:", round(average, 2))
+print("Highest Marks:", highest)
+print("Topper:", topper)
+
+print("\nStudent Results:")
+for name, marks in students.items():
+    result = "Pass" if marks >= 40 else "Fail"
+    print(name, "-", result)
